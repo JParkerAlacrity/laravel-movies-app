@@ -1,0 +1,190 @@
+
+            .bd-placeholder-img {
+                font-size: 1.125rem;
+                text-anchor: middle;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+
+            @media (min-width: 768px) {
+                .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+                }
+            }
+            .navbar-custom { 
+            background-color:rgb(44, 44, 44);
+            }
+            .nav-link {
+            color: white;
+            }
+            .navbar-brand {
+            color: white;
+            }
+            .footer-link{
+                color: rgb(141, 141, 141);
+            }
+            #acc-ov-title{
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+            .card-group{
+                padding-top: 5px;
+                padding-bottom: 5px;
+                padding-left: 15px;
+                padding-right: 15px;
+                /* padding-left: 0px;
+                padding-right: 0px; */
+                border:0px;
+            }
+            .image-card-row{
+                margin-left: 0px;
+                margin-right: 0px;
+            }
+
+            .card-group-body{
+                padding-left: 5px;
+                padding-right: 5px
+            }
+            .base-card{
+                padding-left: 0px;
+                padding-right: 0px;
+                border-left-width: 0px;
+                border-top-width: 0px;
+                border-right-width: 0px;
+                border-bottom-width: 0px;
+            }
+            
+            .card-group-title{
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            
+            .sign-in-pg{
+                color:white;
+            }
+            .p{
+                margin-top: 8px;
+                margin-bottom: 8px;
+            }
+            /* * {box-sizing: border-box} */
+
+            /* Container needed to position the overlay. Adjust the width as needed */
+            .overlay-container {
+            position: relative;
+            max-width: 300px;
+            padding-left: 0;
+            padding-right: 0;
+            }
+
+            /* Make the image to responsive */
+            .overlay-image {
+            display: block;
+            height: auto;
+            
+            }
+
+            /* The overlay effect - lays on top of the container and over the image */
+            .image-overlay {
+            position: absolute;
+            bottom: 0;
+            background: rgb(0, 0, 0);
+            background: rgba(0, 0, 0, 0.5); /* Black see-through */
+            color: #f1f1f1;
+            width: 100%;
+            height: 100%;
+            transition: .5s ease;
+            opacity:0;
+            color: white;
+            font-size: 20px;
+            padding: 20px;
+            text-align: center;
+            left: 0px;
+            }
+
+            /* When you mouse over the container, fade in the overlay title */
+            .container:hover .image-overlay {
+            opacity: 1;
+            }
+
+            /* .overlay-row{
+                margin-left: 0px;
+                margin-right: 0px;
+            } */
+
+            .image-overlayed{
+                padding-left: 0px;
+                padding-right: 0px;
+            }
+
+            .progress {
+                width: 150px;
+                height: 150px;
+                background: none;
+                position: relative;
+            }
+    
+            .progress::after {
+                content: "";
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                border: 6px solid #eee;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+    
+            .progress>span {
+                width: 50%;
+                height: 100%;
+                overflow: hidden;
+                position: absolute;
+                top: 0;
+                z-index: 1;
+            }
+    
+            .progress .progress-left {
+                left: 0;
+            }
+    
+            .progress .progress-bar {
+                width: 100%;
+                height: 100%;
+                background: none;
+                border-width: 6px;
+                border-style: solid;
+                position: absolute;
+                top: 0;
+            }
+    
+            .progress .progress-left .progress-bar {
+                left: 100%;
+                border-top-right-radius: 80px;
+                border-bottom-right-radius: 80px;
+                border-left: 0;
+                -webkit-transform-origin: center left;
+                transform-origin: center left;
+            }
+    
+            .progress .progress-right {
+                right: 0;
+            }
+    
+            .progress .progress-right .progress-bar {
+                left: -100%;
+                border-top-left-radius: 80px;
+                border-bottom-left-radius: 80px;
+                border-right: 0;
+                -webkit-transform-origin: center right;
+                transform-origin: center right;
+            }
+    
+            .progress .progress-value {
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        
+        
