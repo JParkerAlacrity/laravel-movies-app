@@ -19,12 +19,22 @@ class ActorSeeder extends Seeder
     {
         $faker = Factory::create();
         $faker->addProvider(new FakeActor($faker));
-        for($i = 0; $i < 1000; $i++)
-            {
-                Actor::create([
-                    'actor' => $faker->actor($gender= null, $duplicates = false)
+
+        
+        
+        $actors = $faker->actors($gender= null, $count=190 , $duplicates = false);
+        foreach($actors as $actor){
+            Actor::create([
+            'actor' => $actor
             ]);
         }
+        // foreach($actors as $actor){
+                
+        //         $achievement->actors()->attach($actor->random()->id);
+        //     }
+        // }
+
+
 
     }
 }

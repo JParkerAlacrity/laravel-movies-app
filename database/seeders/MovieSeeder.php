@@ -5,6 +5,7 @@ namespace Database\Seeders;
 
 use App\Models\Movie;
 use App\Models\Actor;
+use App\Models\Watch;
 use Illuminate\Database\Seeder;
 use Faker\Factory;
 use Xylis\FakerCinema\Provider\Movie as FakeMovie;

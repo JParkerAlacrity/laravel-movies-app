@@ -18,7 +18,6 @@ class UserController extends Controller
     public function store(Request $request)
     {
         $input = $request->validate([
-            ,
             'description' => 'required|min:10'
         ]);
 

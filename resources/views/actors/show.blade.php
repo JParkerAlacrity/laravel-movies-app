@@ -16,7 +16,7 @@
 						Number of Awards: {{--{{ $actor->awards->count() }} --}}
 					</h5>
 					<h5>
-						Related Achievements:
+						Related Achievements: {{--{{ $achievements->}}--}}
 					</h5>
 				</div>
 			</div>

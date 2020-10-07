@@ -18,6 +18,11 @@ class Movie extends Model
 
         return $this->belongsToMany(Actor::class);
     }
+
+    public function watches(){
+
+        return $this->hasMany(Watch::class);
+    }
     
     public function url(){
 

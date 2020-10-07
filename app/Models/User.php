@@ -60,7 +60,16 @@ class User extends Authenticatable
         'profile_photo_url',
     ];
     
-    public function movies(){
-        return $this->hasMany(Movie::class);
+    // public function movies(){
+    //     return $this->hasMany(Movie::class);
+    // }
+
+    public function watches()
+    {
+        return $this->hasMany(Watch::class);
+    }
+    public function usersWatchedMovies()
+    {
+        return $this->belongsToMany(Movie::class)->using(Watch::class);
     }
 }

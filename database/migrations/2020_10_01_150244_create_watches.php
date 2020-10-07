@@ -16,7 +16,7 @@ class CreateWatches extends Migration
         Schema::create('watches', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->bigInterger('user_id');
+            $table->bigInteger('user_id');
             $table->bigInteger('movie_id');
         });
     }

@@ -1,13 +1,22 @@
 @extends('layouts/master')
 
 @section('content')
-    
-    {{-- {{ $movies->links() }} --}}
-    {{-- {{ $actors->links() }} --}}
 
     <div class="container">
 
         @include('movies/widgets/search')
+
+        {{-- @foreach($users as $user)
+            {{$user->watches}}
+        @endforeach --}}
+
+        @foreach($actors as $actor)
+            <a href="{{ $actor->url() }}">
+                <p>
+                    {{ $actor->actor }}
+                </p>
+            </a>
+        @endforeach
 
         @foreach($movies as $movie)
 
