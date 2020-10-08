@@ -5,8 +5,10 @@
 	<div class="container">		
 		<div class="row">
 			<div class="card">
-				<img src="{{ $actor->pic }}" class="card-img-top col-md-3" alt="Picture of {{ $actor->actor }}">
+				<img src="//placehold.it/150" class="card-img-top col-md-3" alt="Picture of {{ $actor->actor }}">
 				
+
+				{{-- {{ $actor->pic }} --}}
 			
 				<div class="card-body col-md-9">
 					<h5>

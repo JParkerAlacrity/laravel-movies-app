@@ -33,7 +33,16 @@ class WatchController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    // public function store(Request $request)
+    // {
+    //     $input['user_id'] = Auth::user()->id;
+    //     $input['movie_id'] = $request['movie_id'];
+
+    //     Watch::create($input);
+    //     return $input;
+    // }
+
+    public function __invoke(Request $request)
     {
         $input['user_id'] = Auth::user()->id;
         $input['movie_id'] = $request['movie_id'];

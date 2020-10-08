@@ -3,6 +3,7 @@
 use App\Http\Controllers\MovieController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\ActorController;
+use App\Http\Controllers\WatchController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 
@@ -43,6 +44,10 @@ Route::resource('/movies', MovieController::Class)->names([
 // Route::get('/movies/{movie}', [MovieController::Class, 'show'])->name('movies.show');
 
 Route::get('/search', SearchController::Class)->name('search');
+
+Route::resource('/search/store', WatchController::Class)->names([
+    'store' => 'search.store'
+]);
 
 Route::resource('/actors', ActorController::Class)->names([
     'index' => 'actors.index',

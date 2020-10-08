@@ -10,7 +10,7 @@
             </button>
             <div class="dropdown-menu dropdown-menu-right " aria-labelledby="dropdownMenuButton">
                 <a class="dropdown-item" href="{{ route('achievement-overview') }}">Achievement overview</a>
-                <a class="dropdown-item" href="{{ route('movies.index') }}">Update watched</a>
+                <a class="dropdown-item" href="{{ route('search') }}">Update watched</a>
                 <button class="dropdown-item" method="POST" action="{{ route('logout') }}">Log-out</button>
             </div>
         </div>

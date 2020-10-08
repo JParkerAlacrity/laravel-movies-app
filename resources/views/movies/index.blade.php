@@ -4,18 +4,18 @@
 
     <div class="container">
 
-        @include('movies/widgets/search')
-
         {{-- @foreach($users as $user)
             {{$user->watches}}
         @endforeach --}}
 
         @foreach($actors as $actor)
-            <a href="{{ $actor->url() }}">
+            {{-- <a href="{{ $actor->url() }}">
                 <p>
                     {{ $actor->actor }}
                 </p>
-            </a>
+            </a> --}}
+
+            @include('movies/widgets/actor-card')
         @endforeach
 
         @foreach($movies as $movie)
