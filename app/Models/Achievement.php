@@ -12,12 +12,23 @@ class Achievement extends Model
     protected $fillable = [
         'achievement',
         'ranking'
+
     ];
+
+    
 
     public function url(){
 
         return route('achievement.show', $this->id);
     }
 
+    public function movies(){
+
+        return $this->hasMany(Movies::class);
+    }
     
+
+
+
 }
+

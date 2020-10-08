@@ -25,26 +25,17 @@
 
 						<p>
 							{{$movie->overview}}
-						</p>			
+						</p>	
+						<button type="button" class="btn btn-dark"  data-toggle="button"  value="{{ $movie->id }}" aria-pressed="false" autocomplete="off" @change="recordWatch({{ $movie->id }})">
+							Add as watched!
+						</button>		
 					</div>
 				</div>	
 			</div>
 		</div>
+		<div class="row">
 			
-				{{-- <h5>
-					This actor has starred in {{ $actor->movies->count() }} movies
-				</h5>
-
-
-				@foreach($actor->movies as $otherMovie)
-					<p>
-						<a href="{{ $otherMovie->url() }}">
-							{{ $otherMovie->title }}
-						</a>
-					</p>
-				@endforeach
-
-				<img src="{{ $actor->pic }}" alt="Picture of {{ $actor->actor }}"> --}}
-	
+		</div>
 	</div>
+
 @endsection

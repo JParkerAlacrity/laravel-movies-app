@@ -7,7 +7,7 @@
             <div class="card-body">
                 <h5 class="card-title">
                     <a href="{{ $movie->url() }}">
-                        {{ $movie->title }}
+                        {{ $movie->title }} {{ $movie->id }}
                     </a>
                 </h5>
                 <h6>

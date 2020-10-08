@@ -28,4 +28,9 @@ class Watch extends Pivot
 
         return $this->belongsTo(User::class);
     }
+
+    public function achievement(){
+
+        return $this->belongsTo(Achievement::class);
+    }
 }

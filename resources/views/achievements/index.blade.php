@@ -7,6 +7,9 @@
         <div class="row">
             <div class="col-md-12" id="acc-ov-title">
                 <h1> Achievement Overview</h1>
+                {{-- @foreach()
+                    {{ Auth::user()->usersWatchedMovies() }}
+                @endforeach --}}
             </div>
         </div>
 

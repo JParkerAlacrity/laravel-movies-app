@@ -22,7 +22,13 @@
 						Number of Awards: {{--{{ $actor->awards->count() }} --}}
 					</h5>
 					<h5>
-						Related Achievements: {{--{{ $achievements->}}--}}
+						Related Achievements: 
+						{{-- {{ $actor->achievements }} --}}
+						@foreach($actor->achievements as $achievement)
+							<a href="{{ $achievement->url() }}">
+								{{ $achievement->achievement }} |
+							</a>
+                    	@endforeach
 					</h5>
 				</div>
 			</div>

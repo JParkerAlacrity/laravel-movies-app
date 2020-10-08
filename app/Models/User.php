@@ -68,9 +68,22 @@ class User extends Authenticatable
     {
         return $this->hasMany(Watch::class);
     }
-    
+
     public function usersWatchedMovies()
     {
         return $this->belongsToMany(Movie::class)->using(Watch::class);
     }
+
+    // public function  compareWatches(){
+        
+    //     $watchedMovies = $this->usersWatchedMovies();
+    //     $achievementMovies = Achievements::where('movie_id', '=', Input::get('email'))->first();
+    //     $achievements = Achievements::all;
+    //     $comparison = [];
+    //     foreach($watchedMovies as $watchedMovie){
+    //         if( in_array($watchedMovie->id,)){
+                
+    //         }
+    //     }
+    // }
 }

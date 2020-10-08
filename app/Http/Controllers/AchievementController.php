@@ -12,6 +12,12 @@ class AchievementController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function actorAchievement(Actor $actor){
+
+        foreach($actor->movies as $movie){
+            $achievement->attach($movie->id);
+        }
+    }
     public function index()
     {
         return view('achievements/index');
@@ -41,20 +47,20 @@ class AchievementController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Actor  $actor
+     * @param  \App\Models\Achievement  $achievement
      * @return \Illuminate\Http\Response
      */
-    public function show(Actor $actor){
-        return view('achievments/show');
+    public function show(Achievement $achievement){
+        return view('achievements/show');
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Actor  $actor
+     * @param  \App\Models\Achievement  $achievement
      * @return \Illuminate\Http\Response
      */
-    public function edit(Actor $actor)
+    public function edit(Achievement $achievement)
     {
         //
     }
@@ -63,10 +69,10 @@ class AchievementController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Actor  $actor
+     * @param  \App\Models\Achievement  $achievement
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Actor $actor)
+    public function update(Request $request, Achievement $achievement)
     {
         //
     }
@@ -74,10 +80,10 @@ class AchievementController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Actor  $actor
+     * @param  \App\Models\Achievement  $achievement
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Actor $actor)
+    public function destroy(Achievement $achievement)
     {
         //
     }

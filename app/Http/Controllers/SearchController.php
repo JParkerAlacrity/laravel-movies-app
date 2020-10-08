@@ -29,14 +29,19 @@ class SearchController extends Controller
 
         $movies = Movie::where('title','like',"%$search%")
             ->orWhere('genre','like', "%$search%")
-            ->get();
+            ->orderBy('title')
+            ->paginate(15);
+            // ->get();
         
         $actors = Actor::where('actor','like',"%$search%")
-            ->get();
+            ->orderBy('actor')
+            ->paginate(5);
+            // ->get();
 
         //$results=view('movies/index',compact('search','movies','actors'));
         
         $results = compact('search', 'movies','actors');
+            // ->paginate(15);
     
         return view('movies/index', compact('search','movies','actors'));
     }

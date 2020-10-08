@@ -14,6 +14,7 @@ class AchievementSeeder extends Seeder
      *
      * @return void
      */
+    
     public function run()
     {
         $movies = Movie::all();
@@ -26,7 +27,8 @@ class AchievementSeeder extends Seeder
             
             Achievement::create([
                 'achievement' => $genre . " Fan",
-                'ranking' => 'gold'
+                'ranking' => 'gold',
+                
             ]);
         }
 
@@ -37,11 +39,15 @@ class AchievementSeeder extends Seeder
         })->unique()->values();           
         
         foreach($actors as $actor){
+
+            
             
             Achievement::create([
                 'achievement' => $actor . " Fan",
                 'ranking' => 'silver'
             ]);
+
+            
 
 
         }
