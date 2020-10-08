@@ -7,22 +7,21 @@
 			<div class="card">
 				<img src="//placehold.it/150" class="card-img-top col-md-3" alt="Picture of {{ $actor->actor }}">
 				
-
+                
 				{{-- {{ $actor->pic }} --}}
 			
 				<div class="card-body col-md-9">
-
-					<h2>
-						{{ $actor->actor }}
-					</h2>
+                    <h2>
+                        {{ $achievement->achievement }}
+                    </h2>
 					<h5>
-						Number of movies: {{ $actor->movies->count() }} 
+						Ranking: {{ $achievement->ranking }} 
 					</h5>
 					<h5>
-						Number of Awards: {{--{{ $actor->awards->count() }} --}}
+						User Progress: {{--{{ $actor->awards->count() }} --}}
 					</h5>
 					<h5>
-						Related Achievements: {{--{{ $achievements->}}--}}
+						: {{--{{ $achievements->}}--}}
 					</h5>
 				</div>
 			</div>

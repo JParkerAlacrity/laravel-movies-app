@@ -68,6 +68,7 @@ class User extends Authenticatable
     {
         return $this->hasMany(Watch::class);
     }
+    
     public function usersWatchedMovies()
     {
         return $this->belongsToMany(Movie::class)->using(Watch::class);

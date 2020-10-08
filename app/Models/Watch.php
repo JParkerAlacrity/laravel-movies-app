@@ -9,18 +9,22 @@ class Watch extends Pivot
 {
     use HasFactory;
 
+    protected $table = 'mov_watches';
+
+    public $timestamps = false;
+
     // protected $table = "watches";
     protected $fillable = [
         'user_id',
         'movie_id'
     ];
 
-    public function movies(){
+    public function movie(){
 
         return $this->belongsTo(Movies::class);
     }
 
-    public function users(){
+    public function user(){
 
         return $this->belongsTo(User::class);
     }

@@ -14,5 +14,10 @@ class Achievement extends Model
         'ranking'
     ];
 
+    public function url(){
+
+        return route('achievement.show', $this->id);
+    }
+
     
 }

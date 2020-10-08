@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Watch;
+use App\Models\Achievement;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
-class WatchController extends Controller
+class AchievementController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +14,7 @@ class WatchController extends Controller
      */
     public function index()
     {
-        //
+        return view('achievements/index');
     }
 
     /**
@@ -34,42 +33,28 @@ class WatchController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    // public function store(Request $request)
-    // {
-    //     $input['user_id'] = Auth::user()->id;
-    //     $input['movie_id'] = $request['movie_id'];
-
-    //     Watch::create($input);
-    //     return $input;
-    // }
-
     public function store(Request $request)
-    {
-        $input = $request->validate([
-            'movie_id' => 'required|exists:movies,id'
-        ]);
-
-        return Auth::user()->watches()->create($input);
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Watch  $watch
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Watch $watch)
     {
         //
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Display the specified resource.
      *
-     * @param  \App\Models\Watch  $watch
+     * @param  \App\Models\Actor  $actor
      * @return \Illuminate\Http\Response
      */
-    public function edit(Watch $watch)
+    public function show(Actor $actor){
+        return view('achievments/show');
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  \App\Models\Actor  $actor
+     * @return \Illuminate\Http\Response
+     */
+    public function edit(Actor $actor)
     {
         //
     }
@@ -78,10 +63,10 @@ class WatchController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Watch  $watch
+     * @param  \App\Models\Actor  $actor
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Watch $watch)
+    public function update(Request $request, Actor $actor)
     {
         //
     }
@@ -89,10 +74,10 @@ class WatchController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Watch  $watch
+     * @param  \App\Models\Actor  $actor
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Watch $watch)
+    public function destroy(Actor $actor)
     {
         //
     }

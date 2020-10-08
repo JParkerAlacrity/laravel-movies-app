@@ -4,6 +4,7 @@ use App\Http\Controllers\MovieController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\ActorController;
 use App\Http\Controllers\WatchController;
+use App\Http\Controllers\AchievementController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 
@@ -39,15 +40,19 @@ Route::resource('/movies', MovieController::Class)->names([
     'show' => 'movies.show'
 ]);
 
+Route::resource('/achievements', AchievementController::Class)->names([
+    'index' => 'achievements.index',
+    'show' => 'achievements.show'
+]);
+
 // Route::get('/movies', [MovieController::Class, 'index'])->name('movies.index');
 
 // Route::get('/movies/{movie}', [MovieController::Class, 'show'])->name('movies.show');
 
 Route::get('/search', SearchController::Class)->name('search');
 
-Route::resource('/search/store', WatchController::Class)->names([
-    'store' => 'search.store'
-]);
+Route::post('/watches/store', [WatchController::Class, 'store'])->name('watches.store');
+
 
 Route::resource('/actors', ActorController::Class)->names([
     'index' => 'actors.index',

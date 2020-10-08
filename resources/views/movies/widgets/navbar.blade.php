@@ -9,7 +9,7 @@
                 <i class="fa fa-user"></i>    {{Auth::user()->name}}
             </button>
             <div class="dropdown-menu dropdown-menu-right " aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="{{ route('achievement-overview') }}">Achievement overview</a>
+                <a class="dropdown-item" href="{{ route('achievements.index') }}">Achievements</a>
                 <a class="dropdown-item" href="{{ route('search') }}">Update watched</a>
                 <button class="dropdown-item" method="POST" action="{{ route('logout') }}">Log-out</button>
             </div>
